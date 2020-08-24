@@ -1,4 +1,4 @@
-# [(Bangla) Advanced Node.js)](https://www.youtube.com/watch?v=EwSuZuyIk2k&list=PLEYpvDF6qy8avZ212mzmQ7VPSNHDZ1CNf&index=2)
+# [(Bangla) Advanced Node.js)](https://www.youtube.com/playlist?list=PLEYpvDF6qy8avZ212mzmQ7VPSNHDZ1CNf)
 
 ### API used :
 
@@ -10,13 +10,12 @@
 - `npm install express`
 - `"type": "module"` setting into `package.json` file
 - `npm install nodemon`
+- `npm install mongoose`
 
 ## Topics Cover
-- create react app
-- axios, get
-- chart
-- async, await
-- ES6 arrow function
+- create server in nodejs
+- routing
+- GET, POST
 
 ## Quick Start
 1.  Clone the repo `git clone https://github.com/bipon68/node-js-practice`
@@ -26,7 +25,7 @@
 5.  It will open your browser(http://localhost:4000)
 
 ## Reference
-- [react-chartjs-2](https://www.npmjs.com/package/react-chartjs-2)
+- [Advanced Node.js & Express Bangla Tutorial](https://www.youtube.com/playlist?list=PLEYpvDF6qy8avZ212mzmQ7VPSNHDZ1CNf)
 
 ## Channel: [Foyzul Karim](https://www.youtube.com/channel/UC7d1qGXznqzRDI6MAr4FzIQ)
 
