@@ -1,6 +1,6 @@
 
-// import express from "express";
-const express = require('express');
+import express from "express";
+// const express = require('express');
 // const models = require('./models/index.js');
 import models from "./models/index.js";
 const { query } = require('express');
@@ -15,7 +15,7 @@ const log = (msg) => console.log(msg);
 app.get('/', (req, res) => {
     // const params = JSON.stringify(req.query.id)
     // res.send('Hello world!. Hello Viewers', req.query.id)
-    res.send('Hello world!. Hello Viewers')
+    res.send('Hello world!. Hello Viewers!!')
 })
 app.get('/hello', (req, res) => {
     console.log(req.url);

@@ -11,11 +11,19 @@
 - `"type": "module"` setting into `package.json` file
 - `npm install nodemon`
 - `npm install mongoose`
+- `npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node`
+- update .bablerc file `{
+    "presets": [
+        "@babel/preset-env"
+    ]
+}`
+- update `package.json` file `"start": "nodemon  --exec babel-node app.js"`
 
 ## Topics Cover
 - create server in nodejs
 - routing
 - GET, POST
+- Babel configure
 
 ## Quick Start
 1.  Clone the repo `git clone https://github.com/bipon68/node-js-practice`
@@ -26,6 +34,7 @@
 
 ## Reference
 - [Advanced Node.js & Express Bangla Tutorial](https://www.youtube.com/playlist?list=PLEYpvDF6qy8avZ212mzmQ7VPSNHDZ1CNf)
+- [Writing Your Node.js Apps Using ES6](https://www.codementor.io/@iykyvic/writing-your-nodejs-apps-using-es6-6dh0edw2o)
 
 ## Channel: [Foyzul Karim](https://www.youtube.com/channel/UC7d1qGXznqzRDI6MAr4FzIQ)
 
