@@ -9,6 +9,7 @@
 - for test `node index.js` into terminal. then showing `Hello world`
 - `npm install express`
 - `"type": "module"` setting into `package.json` file
+- `npm install nodemon`
 
 ## Topics Cover
 - create react app
@@ -18,11 +19,11 @@
 - ES6 arrow function
 
 ## Quick Start
-1.  Clone the repo `git clone https://github.com/bipon68/react-covid19-tracker-app`
+1.  Clone the repo `git clone https://github.com/bipon68/node-js-practice`
 2.  Go to your project folder from your terminal
 3.  Run: `npm install` or `yarn install`
 4.  After install, run: `npm run dev`
-5.  It will open your browser(http://localhost:3000)
+5.  It will open your browser(http://localhost:4000)
 
 ## Reference
 - [react-chartjs-2](https://www.npmjs.com/package/react-chartjs-2)
