@@ -4,7 +4,7 @@
 
 ## Project creation step
 
-- `npm init -y`
+- `npm init -y` or `npm init --y`
 - create `index.js` file
 - for test `node index.js` into terminal. then showing `Hello world`
 - `npm install express`
