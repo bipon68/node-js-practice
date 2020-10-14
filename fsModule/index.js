@@ -18,18 +18,30 @@ var server = http.createServer(function(req, res){
         //     res.end();
 
 
-            //write
-            fs.writeFile('demo.txt', 'Hello World. Man!', function (error){
-                if(error){
-                    res.writeHead(200, {'Content-Type': 'text/html'});
-                    res.write('File write fail');
-                    res.end();
-                }else{
-                    res.writeHead(200, {'Content-Type': 'text/html'});
-                    res.write('File write success');
-                    res.end();
-                }
-            })
+            //write using async
+            // fs.writeFile('demo.txt', 'Hello World. Man!', function (error){
+            //     if(error){
+            //         res.writeHead(200, {'Content-Type': 'text/html'});
+            //         res.write('File write fail');
+            //         res.end();
+            //     }else{
+            //         res.writeHead(200, {'Content-Type': 'text/html'});
+            //         res.write('File write success');
+            //         res.end();
+            //     }
+            // })
+
+            let error = fs.writeFileSync('demoSync.txt', 'Welcome to file. Using Sync')
+
+            if(error){
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write('File write fail');
+                res.end();
+            }else{
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write('File write success');
+                res.end();
+            }
 
 
         }
