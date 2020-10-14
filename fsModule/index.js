@@ -45,17 +45,30 @@ var server = http.createServer(function(req, res){
             // }
 
             // rename using Async
-            fs.rename('demo.txt', 'demoNew.txt', function(error){
-                if(error){
-                    res.writeHead(200, {'Content-Type': 'text/html'});
-                    res.write('File rename fail');
-                    res.end();
-                }else{
-                    res.writeHead(200, {'Content-Type': 'text/html'});
-                    res.write('File rename success');
-                    res.end();
-                }
-            })
+            // fs.rename('demo.txt', 'demoNew.txt', function(error){
+            //     if(error){
+            //         res.writeHead(200, {'Content-Type': 'text/html'});
+            //         res.write('File rename fail');
+            //         res.end();
+            //     }else{
+            //         res.writeHead(200, {'Content-Type': 'text/html'});
+            //         res.write('File rename success');
+            //         res.end();
+            //     }
+            // })
+
+            // rename using Sync
+            let error = fs.renameSync('demoNewSync3.txt', 'demoNewSync4.txt');
+
+            if(error){
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write('File rename fail');
+                res.end();
+            }else{
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write('File rename success');
+                res.end();
+            }
 
 
         }
