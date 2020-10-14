@@ -31,17 +31,31 @@ var server = http.createServer(function(req, res){
             //     }
             // })
 
-            let error = fs.writeFileSync('demoSync.txt', 'Welcome to file. Using Sync')
+            // write using sync
+            // let error = fs.writeFileSync('demoSync.txt', 'Welcome to file. Using Sync')
 
-            if(error){
-                res.writeHead(200, {'Content-Type': 'text/html'});
-                res.write('File write fail');
-                res.end();
-            }else{
-                res.writeHead(200, {'Content-Type': 'text/html'});
-                res.write('File write success');
-                res.end();
-            }
+            // if(error){
+            //     res.writeHead(200, {'Content-Type': 'text/html'});
+            //     res.write('File write fail');
+            //     res.end();
+            // }else{
+            //     res.writeHead(200, {'Content-Type': 'text/html'});
+            //     res.write('File write success');
+            //     res.end();
+            // }
+
+            // rename using Async
+            fs.rename('demo.txt', 'demoNew.txt', function(error){
+                if(error){
+                    res.writeHead(200, {'Content-Type': 'text/html'});
+                    res.write('File rename fail');
+                    res.end();
+                }else{
+                    res.writeHead(200, {'Content-Type': 'text/html'});
+                    res.write('File rename success');
+                    res.end();
+                }
+            })
 
 
         }
