@@ -1,4 +1,5 @@
-const { write } = require('fs');
+// const { write } = require('fs');
+var fs = require('fs');
 var http = require('http');
 var URL = require('url');
 
