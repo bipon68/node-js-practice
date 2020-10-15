@@ -85,12 +85,14 @@ var server = http.createServer(function(req, res){
             //     res.end();
             // }
 
-            let result = fs.existsSync('demo.txt');
-            if(result){
-                res.end("True")
-            }else{
-                res.end("False")
-            }
+            fs.exists('demo.txt', function (result){
+                if(result){
+                    res.end("File exist")
+                }else{
+                    res.end("File don't exist")
+                }
+            });
+            
 
 
         }
