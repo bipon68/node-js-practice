@@ -1,30 +1,21 @@
-# [(Bangla) Advanced Node.js)](https://www.youtube.com/playlist?list=PLEYpvDF6qy8avZ212mzmQ7VPSNHDZ1CNf)
+# [Vanilla Node REST API | No Framework](https://www.youtube.com/watch?v=_1xa8Bsho6A)
 
 ### API used :
 
 ## Project creation step
 
 - `npm init -y`
-- create `index.js` file
-- for test `node index.js` into terminal. then showing `Hello world`
-- `npm install express`
-- `"type": "module"` setting into `package.json` file
-- `npm install nodemon`
-- `npm install mongoose`
-- `npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node`
-- update .bablerc file `{
-    "presets": [
-        "@babel/preset-env"
-    ]
-}`
-- update `package.json` file `"start": "nodemon  --exec babel-node app.js"`
 - `npm i -D nodemon`
+- `  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  `
+  - create `server.js` file
+  - Run project `npm run dev`
 
 ## Topics Cover
-- create server in nodejs
-- routing
-- GET, POST
-- Babel configure
+- create server
 
 ## Quick Start
 1.  Clone the repo `git clone https://github.com/bipon68/node-js-practice`
@@ -34,10 +25,9 @@
 5.  It will open your browser(http://localhost:4000)
 
 ## Reference
-- [Advanced Node.js & Express Bangla Tutorial](https://www.youtube.com/playlist?list=PLEYpvDF6qy8avZ212mzmQ7VPSNHDZ1CNf)
-- [Writing Your Node.js Apps Using ES6](https://www.codementor.io/@iykyvic/writing-your-nodejs-apps-using-es6-6dh0edw2o)
 
-## Channel: [Foyzul Karim](https://www.youtube.com/channel/UC7d1qGXznqzRDI6MAr4FzIQ)
+
+## Channel: [Traversy Media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
