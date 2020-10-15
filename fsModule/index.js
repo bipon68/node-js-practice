@@ -60,17 +60,30 @@ var server = http.createServer(function(req, res){
             // rename using Sync
             // let error = fs.renameSync('demoNewSync3.txt', 'demoNewSync4.txt');
 
-            fs.unlink('demoNewSync4.txt', function(error){
-                if(error){
-                    res.writeHead(200, {'Content-Type': 'text/html'});
-                    res.write('File delete fail');
-                    res.end();
-                }else{
-                    res.writeHead(200, {'Content-Type': 'text/html'});
-                    res.write('File delete success');
-                    res.end();
-                }
-            })
+            // file delete async
+            // fs.unlink('demoNewSync4.txt', function(error){
+            //     if(error){
+            //         res.writeHead(200, {'Content-Type': 'text/html'});
+            //         res.write('File delete fail');
+            //         res.end();
+            //     }else{
+            //         res.writeHead(200, {'Content-Type': 'text/html'});
+            //         res.write('File delete success');
+            //         res.end();
+            //     }
+            // })
+
+             // file delete sync
+            let error = fs.unlinkSync('demoNewSync.txt')
+            if(error){
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write('File delete fail');
+                res.end();
+            }else{
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write('File delete success');
+                res.end();
+            }
 
 
         }
