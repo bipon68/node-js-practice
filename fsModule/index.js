@@ -74,15 +74,22 @@ var server = http.createServer(function(req, res){
             // })
 
              // file delete sync
-            let error = fs.unlinkSync('demoNewSync.txt')
-            if(error){
-                res.writeHead(200, {'Content-Type': 'text/html'});
-                res.write('File delete fail');
-                res.end();
+            // let error = fs.unlinkSync('demoNewSync.txt')
+            // if(error){
+            //     res.writeHead(200, {'Content-Type': 'text/html'});
+            //     res.write('File delete fail');
+            //     res.end();
+            // }else{
+            //     res.writeHead(200, {'Content-Type': 'text/html'});
+            //     res.write('File delete success');
+            //     res.end();
+            // }
+
+            let result = fs.existsSync('demo.txt');
+            if(result){
+                res.end("True")
             }else{
-                res.writeHead(200, {'Content-Type': 'text/html'});
-                res.write('File delete success');
-                res.end();
+                res.end("False")
             }
 
 
