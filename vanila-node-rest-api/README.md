@@ -11,6 +11,7 @@
     "dev": "nodemon server.js"
   },
   `
+  - `npm i uuid`
   - create `server.js` file
   - Run project `npm run dev`
 
