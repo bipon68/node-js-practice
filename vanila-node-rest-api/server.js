@@ -21,6 +21,9 @@ const server =  http.createServer((req, res) => {
     }else if(req.url === '/api/products' && req.method === 'POST'){
         createProduct(req, res)
 
+    }else if(req.url.match(/\/api\/products\/([0-9]+)/) && req.method === 'GET'){
+
+        
     }
     else{
         res.writeHead(404, {'Content-Type': 'application/json'})
