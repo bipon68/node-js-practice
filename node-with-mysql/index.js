@@ -15,7 +15,8 @@ con.connect(function(error){
     }else{
         console.log('Node DB Connection Success!')
         // InsertData(con);
-        DataDeleteById(con)
+        // DataDeleteById(con)
+        UpdateData(con)
     }
 })
 
@@ -32,7 +33,7 @@ function InsertData(con){
 }
 
 function DataDeleteById(con){
-    let SQLQuery = "DELETE FROM `students_list` WHERE  `id`='3'"
+    let SQLQuery = "DELETE FROM `students_list` WHERE  `id`='4'"
     con.query(SQLQuery, function(error){
         if(error){
             console.log('Data Delete Failed!')
@@ -41,4 +42,16 @@ function DataDeleteById(con){
         }
     })
 
+}
+
+function UpdateData(con) {
+    let SQLQuery="UPDATE `students_list` SET `phone`='111111',`city`='Chittagong' WHERE `id`='5'";
+    con.query(SQLQuery,function (error) {
+        if(error){
+            console.log("Data Update failed");
+        }
+        else{
+            console.log("Data Update Success!");
+        }
+    })
 }
