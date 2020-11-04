@@ -16,7 +16,8 @@ con.connect(function(error){
         console.log('Node DB Connection Success!')
         // InsertData(con);
         // DataDeleteById(con)
-        UpdateData(con)
+        // UpdateData(con)
+        SelectData(con)
     }
 })
 
@@ -52,6 +53,18 @@ function UpdateData(con) {
         }
         else{
             console.log("Data Update Success!");
+        }
+    })
+}
+
+function SelectData(con){
+    let SQLQuery = "SELECT * FROM `students_list`"
+
+    con.query(SQLQuery, function(error, result){
+        if(error){
+            console.log("Data Select failed");
+        }else{
+            console.log(result);
         }
     })
 }
