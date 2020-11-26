@@ -8,8 +8,9 @@
  // npm install - g nodemon
 // dependencies
 const http = require('http');
-const url = require('url');
-const {StringDecoder} = require('string_decoder')
+// const url = require('url');
+// const {StringDecoder} = require('string_decoder');
+const {handleReqRes} = require('./helpers/handleReqRes')
 
 // app object - module scaffolding
 const app = {};
@@ -28,6 +29,8 @@ app.createServer = () => {
 }
 
 // handle request response
+app.handleReqRest = handleReqRes;
+/*
 app.handleReqRest = (req, res) => {
     // request handing 
     // get the url and parse it
@@ -58,6 +61,7 @@ app.handleReqRest = (req, res) => {
     // response handle
     // res.end('Hello man!')
 }
+*/
 
 // start the server
 app.createServer();
