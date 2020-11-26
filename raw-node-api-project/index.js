@@ -4,6 +4,8 @@
  * Author: 
  * Date: 26/11/2020
  */
+
+ // npm install - g nodemon
 // dependencies
 const http = require('http');
 
@@ -26,7 +28,7 @@ app.createServer = () => {
 // handle request response
 app.handleReqRest = (req, res) => {
     // response handle
-    res.end('Hello world')
+    res.end('Hello man!')
 }
 
 // start the server
